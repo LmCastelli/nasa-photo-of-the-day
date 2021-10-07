@@ -65,11 +65,24 @@ function App() {
       font-size: larger;
     }
   `
-  const RandomButton = styled.button`
-      background-color: black;
-      font-size: larger;
-      width: 40%;
-      color:white;
+  const ButtonDiv = styled.div`
+    background-color: black;
+    font-size: larger;
+    width: 100%;
+    color:white;
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+    button {
+      justify-content: center;
+      align-items: center;
+    }
+    button:hover::before {
+      content: '🚧 UNDER CONSTRUCTION 🚧';
+    }
+    button:hover::after {
+      content: '🚧 UNDER CONSTRUCTION 🚧'
+    }
   `
 
 
@@ -98,9 +111,9 @@ function App() {
           {space.explanation}
         </p>
       </DetailsDiv>
-      <div>
-        <RandomButton>🚀 Get random Picture 🚀</RandomButton>
-      </div>
+      <ButtonDiv>
+        <button> 🚀 Get random Picture 🚀 </button>
+      </ButtonDiv>
       
 
     </div>
